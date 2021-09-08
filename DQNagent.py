@@ -175,8 +175,6 @@ for i_episode in tqdm(range(EPOCH)):
         a = dqn.choose_action(s)
         # obtain the reward and next state and some other information
         s_, r, done, info = env.step(a)
-        if done:
-            r += 100
 
         # 奖励函数（非常重要，影响收敛结果和收敛速度）
         position, _ = s_
